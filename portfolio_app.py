@@ -843,25 +843,30 @@ def home():
         <section class="hero">
             <div class="hero-content animate">
                 <span class="pre-title" style="color: var(--primary); font-size: 1.2rem;">Hello, I'm</span>
-                <h1 class="hero-title animate-float">John Doe</h1>
+                <h1 class="hero-title animate-float">Jhashank Nayan</h1>
                 <h2 class="hero-subtitle">Full Stack Developer</h2>
                 <p class="hero-description" style="color: var(--secondary); max-width: 600px; margin: 2rem auto;">
-                    I craft digital experiences with clean code and modern design principles.
+                    I specialize in crafting digital experiences with clean code and modern design principles.
                 </p>
-                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#projects" class="cta-button">Explore My Work</a>
             </div>
         </section>
 
         <section id="about" class="section bio-section">
             <div class="bio-image-container animate">
-                <img src="https://images.unsplash.com/photo-1722322426803-101270837197?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2ZpbGUlMjBwaWN8ZW58MHx8MHx8fDA%3D" alt="Profile" class="bio-image">
-                <a href="/static/resume.pdf" class="download-cv cta-button">
+                <img src="https://via.placeholder.com/300" alt="Portrait of Jhashank Nayan, Full Stack Developer" class="bio-image">
+                <a href="https://drive.google.com/file/d/1Dmu3apU5FHb-0Z3S-tMmYvWRfB3mA3wQ/view?usp=sharing" class="download-cv cta-button">
                     <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
             <div class="bio-content animate">
                 <h2>About Me</h2>
-                <p>Full Stack Developer with 5+ years of experience building scalable web applications. Passionate about clean code and modern technologies.</p>
+                <p>
+                    I am a highly motivated and result-oriented second-year engineering undergraduate at Acharya Institute of Technology. 
+                    With a solid foundation in mathematics and science, I have a strong passion for Data Science. 
+                    I am eager to learn, contribute, and gain practical experience in the technological world, 
+                    and I'm committed to developing my skills in this exciting field.
+                </p>
             </div>
         </section>
 
@@ -916,17 +921,17 @@ def home():
             <div class="skills-grid">
                 <div class="skill-item animate">Python</div>
                 <div class="skill-item animate">JavaScript</div>
-                <div class="skill-item animate">React</div>
-                <div class="skill-item animate">Node.js</div>
                 <div class="skill-item animate">Flask</div>
                 <div class="skill-item animate">SQL</div>
                 <div class="skill-item animate">Git</div>
-                <div class="skill-item animate">AWS</div>
+                <div class="skill-item animate">HTML</div>
+                <div class="skill-item animate">CSS</div>
+                <div class="skill-item animate">C</div>
             </div>
         </section>
 
         <section id="services" class="section">
-            <h2>Services</h2>
+            <h2>Services (Test)</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-code service-icon"></i>
@@ -947,7 +952,7 @@ def home():
         </section>
 
         <section id="testimonials" class="section">
-            <h2>Testimonials</h2>
+            <h2>Testimonials (Test)</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <p>"John is an exceptional developer who delivers high-quality work on time."</p>
@@ -965,7 +970,7 @@ def home():
         </section>
 
         <section id="blog" class="section">
-            <h2>Blog</h2>
+            <h2>Blog (Test)</h2>
             <div class="blog-grid">
                 <div class="blog-card">
                     <img src="https://via.placeholder.com/300x200" alt="Blog 1" class="blog-image">
@@ -1046,11 +1051,11 @@ def home():
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/NYN-05"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jhashanknayan/"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
-                <p>© 2024 Portfolio. All rights reserved.</p>
+                <p>© 2025 Jhashank Nayan. All rights reserved.</p>
             </div>
         </footer>
 
