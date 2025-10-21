@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution built with Next.js and Stripe integration. Features include product management, shopping cart, user authentication, and payment processing.",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=1200&h=630&fit=crop",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "PostgreSQL", "Prisma"],
+    "githubUrl": "https://github.com/yourusername/ecommerce-platform",
+    "liveUrl": "https://ecommerce-demo.vercel.app",
+    "featured": true,
+    "category": "Full Stack"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "description": "Real-time collaborative task management application with drag-and-drop functionality, team features, and notifications.",
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
+    "technologies": ["React", "Node.js", "Socket.io", "MongoDB", "Express", "Redux"],
+    "githubUrl": "https://github.com/yourusername/task-manager",
+    "liveUrl": "https://taskmanager-demo.vercel.app",
+    "featured": true,
+    "category": "Full Stack"
+  },
+  {
+    "id": 3,
+    "title": "AI Image Generator",
+    "description": "Web application that generates AI images using OpenAI's DALL-E API. Includes prompt optimization and image history.",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+    "technologies": ["Next.js", "OpenAI API", "Tailwind CSS", "Vercel"],
+    "githubUrl": "https://github.com/yourusername/ai-image-generator",
+    "liveUrl": "https://ai-generator-demo.vercel.app",
+    "featured": false,
+    "category": "AI/ML"
+  },
+  {
+    "id": 4,
+    "title": "Weather Dashboard",
+    "description": "Responsive weather application with real-time data, forecasts, and location-based weather information.",
+    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=1200&h=630&fit=crop",
+    "technologies": ["React", "TypeScript", "Weather API", "Chart.js"],
+    "githubUrl": "https://github.com/yourusername/weather-dashboard",
+    "liveUrl": "https://weather-demo.vercel.app",
+    "featured": false,
+    "category": "Frontend"
+  },
+  {
+    "id": 5,
+    "title": "Blog Platform",
+    "description": "Modern blogging platform with markdown support, SEO optimization, and content management system.",
+    "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=630&fit=crop",
+    "technologies": ["Next.js", "Sanity CMS", "TypeScript", "Tailwind CSS"],
+    "githubUrl": "https://github.com/yourusername/blog-platform",
+    "liveUrl": "https://blog-demo.vercel.app",
+    "featured": false,
+    "category": "Full Stack"
+  },
+  {
+    "id": 6,
+    "title": "Portfolio Generator",
+    "description": "Tool to help developers create beautiful portfolio websites with customizable templates and themes.",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop",
+    "technologies": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    "githubUrl": "https://github.com/yourusername/portfolio-generator",
+    "liveUrl": "https://portfolio-gen-demo.vercel.app",
+    "featured": false,
+    "category": "Frontend"
+  }
+]
