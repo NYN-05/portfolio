@@ -1,10 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  aria-label="Profile icon"
+  role="img"
+>
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    <!-- Accent Gradient -->
+    <linearGradient id="portfolioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="55%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
     </linearGradient>
+
+    <!-- Soft Glow -->
+    <filter id="portfolioGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="100" height="100" rx="20" fill="url(#grad)"/>
-  <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">P</text>
+
+  <!-- Head -->
+  <circle
+    cx="256"
+    cy="168"
+    r="72"
+    fill="url(#portfolioGradient)"
+    filter="url(#portfolioGlow)"
+  />
+
+  <!-- Upper Body / Shoulders -->
+  <path
+    d="
+      M128 416
+      C128 320 192 288 256 288
+      C320 288 384 320 384 416
+      Z
+    "
+    fill="url(#portfolioGradient)"
+    opacity="0.9"
+  />
 </svg>
