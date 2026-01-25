@@ -7,9 +7,3 @@
 
 [build.environment]
   NODE_VERSION = "18"
-
-# Redirects for SPA behavior
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
