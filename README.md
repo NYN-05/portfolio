@@ -194,7 +194,7 @@ Contributions, issues, and feature requests are welcome!
 
 **Jhashank Nayan**
 
-- Website: [yourwebsite.com](https://yourwebsite.com)
+- Website: [jhashanknayan.vercel.app](https://jhashanknayan.vercel.app)
 - GitHub: [@NYN-05](https://github.com/NYN-05)
 - LinkedIn: [Jhashank Nayan](https://www.linkedin.com/in/jhashanknayan/)
 

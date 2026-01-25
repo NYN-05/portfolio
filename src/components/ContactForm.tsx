@@ -31,11 +31,18 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setError("");
 
+    const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+    if (!formId) {
+      setError("Contact form isn’t configured yet. Please email me directly.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       // Replace with your actual form submission logic
       // Example using Formspree:
       const response = await fetch(
-        `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`,
+        `https://formspree.io/f/${formId}`,
         {
           method: "POST",
           headers: {
@@ -174,14 +181,16 @@ export default function ContactForm() {
       )}
 
       {/* Submit Button */}
-      <button
+      <motion.button
         type="submit"
         disabled={isSubmitting}
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.98 }}
         className="btn-primary flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
         <FiSend className="w-5 h-5" />
-      </button>
+      </motion.button>
     </motion.form>
   );
 }

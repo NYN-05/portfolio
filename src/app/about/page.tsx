@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { getAllSkills } from "@/lib/api";
 import TechStack from "@/components/TechStack";
+import BackgroundLinesDemo from "@/components/background-lines-demo";
+import HowIThink from "@/components/HowIThink";
+import ExperienceAndValidation from "@/components/ExperienceAndValidation";
 
 export default function AboutPage() {
   const skills = getAllSkills();
@@ -13,7 +16,8 @@ export default function AboutPage() {
         {/* About Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="section-heading">About Me</h1>
@@ -21,66 +25,77 @@ export default function AboutPage() {
             Learn more about my background and expertise
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Hi, I&apos;m Jhashank Nayan
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                I&apos;m a passionate Software Developer with over 5 years of
-                experience in building web applications. I specialize in
-                creating scalable, maintainable, and performant solutions using
-                modern technologies.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                My journey in software development started with a curiosity
-                about how things work. Today, I focus on full-stack development,
-                with a particular interest in React, Next.js, and TypeScript.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                When I&apos;m not coding, you can find me contributing to open-source
-                projects, writing technical blog posts, or exploring new
-                technologies and frameworks.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <motion.div whileHover={{ y: -6 }} className="relative group">
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/40 to-cyan-500/40 opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+              <div className="card relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400" />
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Who I Am</h2>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  I&apos;m a passionate Software Developer focused on building products that blend design and engineering. I specialize in creating scalable, maintainable, and performant solutions using modern technologies.
+                </p>
+              </div>
+            </motion.div>
 
-            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Quick Facts</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-2">
-                  <span className="text-3xl">🎓</span>
-                  <div>
-                    <p className="font-semibold">Education</p>
-                    <p className="text-sm opacity-90">
-                      B.S. Computer Science
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="text-3xl">💼</span>
-                  <div>
-                    <p className="font-semibold">Experience</p>
-                    <p className="text-sm opacity-90">5+ Years</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="text-3xl">🌍</span>
-                  <div>
-                    <p className="font-semibold">Location</p>
-                    <p className="text-sm opacity-90">Your City, Country</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="text-3xl">📧</span>
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="text-sm opacity-90">your.email@example.com</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            {/* Card 2 */}
+            <motion.div whileHover={{ y: -6 }} className="relative group">
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-purple-500/40 to-pink-500/40 opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+              <div className="card relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-400" />
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">What I Do</h2>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  I focus on <span className="text-gray-900 dark:text-white font-semibold">full-stack development</span> with a love for React, Next.js, and TypeScript. I enjoy shaping clear product experiences, building APIs, and refining performance across the stack.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div whileHover={{ y: -6 }} className="relative group">
+              <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-emerald-500/40 to-lime-500/40 opacity-0 blur transition-all duration-300 group-hover:opacity-100" />
+              <div className="card relative rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl dark:border-white/10 dark:bg-white/5">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex h-3 w-3 rounded-full bg-gradient-to-r from-emerald-500 to-lime-400" />
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Quick Facts</h2>
+                </div>
+                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                  <li className="flex items-center justify-between">
+                    <span>Education</span>
+                    <span className="text-gray-900 dark:text-white">Computer Science</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Focus</span>
+                    <span className="text-gray-900 dark:text-white">Full-stack Web</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Location</span>
+                    <span className="text-gray-900 dark:text-white">Bengaluru, India</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Email</span>
+                    <span className="text-gray-900 dark:text-white">jnyn2005@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
           </div>
+
+          <p className="mt-10 text-center text-gray-600 dark:text-gray-300 italic">
+            “I believe thoughtful engineering and delightful design together create experiences people love.”
+          </p>
         </motion.section>
+
+        {/* Background lines demo */}
+        <div>
+          <BackgroundLinesDemo />
+        </div>
+
+        {/* How I Think Section */}
+        <HowIThink />
 
         {/* Skills Section */}
         <motion.section
@@ -102,67 +117,7 @@ export default function AboutPage() {
         </motion.section>
 
         {/* Experience Timeline */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="section-heading">Experience</h2>
-          <p className="section-subheading">My professional journey</p>
-
-          <div className="space-y-8">
-            {[
-              {
-                title: "Senior Software Developer",
-                company: "Tech Company Inc.",
-                period: "2021 - Present",
-                description:
-                  "Leading development of web applications using React, Next.js, and Node.js. Mentoring junior developers and implementing best practices.",
-              },
-              {
-                title: "Software Developer",
-                company: "Startup Co.",
-                period: "2019 - 2021",
-                description:
-                  "Developed and maintained multiple client projects. Worked with diverse tech stacks and collaborated with cross-functional teams.",
-              },
-              {
-                title: "Junior Developer",
-                company: "Digital Agency",
-                period: "2018 - 2019",
-                description:
-                  "Built responsive websites and web applications. Learned industry best practices and modern development workflows.",
-              },
-            ].map((job, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                      {job.title}
-                    </h3>
-                    <p className="text-primary-600 dark:text-primary-400">
-                      {job.company}
-                    </p>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
-                    {job.period}
-                  </p>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {job.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+        <ExperienceAndValidation />
       </div>
     </div>
   );

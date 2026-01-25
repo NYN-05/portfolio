@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/Navbar";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const geistSans = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jhashanknayan.vercel.app";
 
 export const metadata: Metadata = {
   title: {
@@ -28,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
+    url: siteUrl,
     title: "Jhashank Nayan | Software Developer",
     description:
       "Software Developer passionate about creating elegant solutions to complex problems.",
     siteName: "Jhashank Nayan Portfolio",
     images: [
       {
-        url: "https://yourwebsite.com/og-image.jpg",
+        url: `${siteUrl}/og-image.svg`,
         width: 1200,
         height: 630,
         alt: "Jhashank Nayan Portfolio",
@@ -47,8 +50,8 @@ export const metadata: Metadata = {
     title: "Jhashank Nayan | Software Developer",
     description:
       "Software Developer passionate about creating elegant solutions to complex problems.",
-    images: ["https://yourwebsite.com/og-image.jpg"],
-    creator: "@yourusername",
+    images: [`${siteUrl}/og-image.svg`],
+    creator: "@Metalgear63097",
   },
   robots: {
     index: true,
@@ -62,9 +65,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.svg",
   },
 };
 
@@ -75,11 +76,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-grow pt-16 md:pt-20">{children}</main>
+            <Navigation />
+            <PageTransition>{children}</PageTransition>
             <Footer />
           </div>
         </ThemeProvider>

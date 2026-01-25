@@ -39,11 +39,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gradient">Portfolio</h3>
+            <h3 className="text-xl font-bold text-gradient">Jhashank Nayan</h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Software Developer passionate about creating elegant solutions to
-              complex problems. Building the future, one line of code at a
-              time.
+              Software Developer focused on creating elegant, high-performance
+              web experiences. Building the future, one line of code at a time.
             </p>
           </div>
 
