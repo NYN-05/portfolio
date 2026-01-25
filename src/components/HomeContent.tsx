@@ -118,19 +118,20 @@ export default function HomeContent() {
             <div className="relative group">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-40 transition-opacity group-hover:opacity-70" />
               <motion.div
-                className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden"
+                className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-blue-500/20 dark:via-purple-500/20 dark:to-pink-500/20"
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               >
                 <Image
                   src="/images/profile.jpg"
-                  alt="Profile"
-                  width={320}
-                  height={320}
-                  className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                  alt="Jhashank Nayan portrait"
+                  fill
+                  sizes="(min-width: 768px) 320px, 256px"
+                  priority
+                  className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
                 />
                 {/* Overlay ring placed above the image so edges meet cleanly */}
-                <div className="absolute inset-0 rounded-full pointer-events-none ring-4 ring-white/10" />
+                <div className="absolute inset-0 rounded-full pointer-events-none ring-2 ring-gray-200 dark:ring-white/10" />
               </motion.div>
             </div>
           </motion.div>
